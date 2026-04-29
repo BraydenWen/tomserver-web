@@ -3,7 +3,7 @@
 
 const serverConfig = {
     // 服务器基本信息
-    webVersion: "0.2",
+    webVersion: "0.3",
     serverName: "汤姆服务器",           // 服务器名称
     pageTitle: "汤姆服务器 - 官方网站",   // 页面标题
     serverIP: "ao.rainplay.cn", 
