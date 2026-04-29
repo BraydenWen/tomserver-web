@@ -1,0 +1,234 @@
+/* 自定义样式以增强BakaXL风格 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+:root {
+  --primary-blue: #4A90E2;
+  --light-blue: #F0F8FF;
+  --dark-blue: #2C6DFF;
+  --accent-pink: #FF5577;
+  --text-dark: #333333;
+  --text-gray: #555555;
+  --text-light: #FFFFFF;
+  --border-color: #E0E0E0;
+  --card-bg: rgba(255, 255, 255, 0.85);
+}
+
+body {
+  font-family: 'Noto Sans SC', 'Roboto', sans-serif;
+  background-color: var(--light-blue);
+  color: var(--text-dark);
+}
+
+/* 玻璃态卡片效果 */
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  border-radius: 16px;
+}
+
+/* 按钮样式 */
+.btn-primary {
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #3a7bc8;
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(74, 144, 226, 0.3);
+}
+
+.btn-secondary {
+  background-color: var(--text-light);
+  color: var(--primary-blue);
+  border: 2px solid var(--primary-blue);
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #f0f8ff;
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(74, 144, 226, 0.2);
+}
+
+/* 导航栏 */
+.navbar {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* 标题样式 */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-gray);
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+}
+
+/* 特色功能卡片 */
+.feature-card {
+  transition: all 0.3s ease;
+  padding: 2rem;
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon-bg {
+  width: 64px;
+  height: 64px;
+  background-color: rgba(74, 144, 226, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.feature-icon {
+  color: var(--primary-blue);
+  font-size: 1.5rem;
+}
+
+/* 截图展示 */
+.gallery-item {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* 服务器信息卡片 */
+.server-info-card {
+  background: linear-gradient(130deg, rgba(74, 144, 226, 0.1), rgba(44, 109, 255, 0.1));
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* FAQ部分 */
+.faq-question {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.faq-question:focus {
+  outline: none;
+}
+
+.faq-answer {
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.faq-answer.show {
+  max-height: 1000px;
+  opacity: 1;
+  padding-top: 1rem;
+}
+
+.faq-answer p {
+  margin-bottom: 0.5rem;
+}
+
+.faq-answer p:last-child {
+  margin-bottom: 0;
+}
+
+/* 页脚 */
+.footer {
+  background-color: #111111;
+  color: var(--text-light);
+}
+
+.footer-link {
+  color: #aaa;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: var(--text-light);
+}
+
+/* 动画效果 */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  
+  .feature-card {
+    padding: 1.5rem;
+  }
+  
+  .server-info-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>更新日志 - 汤姆服务器</title>
+    <!-- 你网站原有的CSS，保留 -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 页面整体背景，和你官网一致 */
+        body {
+            background-color: #f9fafb;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+
+        /* 主容器，居中，和官网布局对齐 */
+        .changelog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* 页面大标题 */
+        .changelog-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+
+        .changelog-sub {
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 50px;
+        }
+
+        /* 每个版本卡片，和你gallery-item风格完全统一 */
+        .log-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .log-card:hover {
+            transform: scale(1.01);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+
+        /* 版本号标题 */
+        .log-version {
+            font-size: 20px;
+            font-weight: bold;
+            color: #40c9ff;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .log-date {
+            font-size: 14px;
+            color: #9ca3af;
+            font-weight: normal;
+        }
+
+        /* 更新列表 */
+        .log-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .log-list li {
+            padding: 8px 0;
+            color: #374151;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .log-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* 返回首页按钮 */
+        .back-home {
+            display: block;
+            width: fit-content;
+            margin: 40px auto 0;
+            padding: 12px 30px;
+            background: #40c9ff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 999px;
+            transition: all 0.3s ease;
+        }
+
+        .back-home:hover {
+            background: #22b8e8;
+        }
+    </style>
+</head>
+<body>
+    <div class="changelog-container">
+        <h1 class="changelog-title">汤姆服务器官网更新日志</h1>
+        <p class="changelog-sub">记录每一次优化与升级</p>
+        
+        <!-- 以后你要加新版本，直接复制下面这张卡片改 -->
+        <div class="log-card">
+            <div class="log-version">
+                版本 0.2
+                <span class="log-date">2026-04-29</span>
+            </div>
+            <ul class="log-list">
+                <li>✅ 网页内部图片使用腾讯云托管，节省服务器的网络带宽</li>
+                <li>✅ 完善了网页顶部导航栏</li>
+                <li>✅ 网页内部完善了友情链接</li>
+                <li>✅ 网页底栏做了部分修改</li>
+                <li>✅ 网页底栏添加了汤姆服务器卫星地图</li>
+                <li>✅ 网页底栏添加了汤姆服务器状态监控</li>
+                <li>✅ 完善了MC客户端下载链接</li>
+
+                <br>
+                <li>• 在此特别感谢诺子/NI52为汤姆服务器官网提供网页托管服务！</li>
+            </ul>
+        </div>
+
+        <!-- 版本 0.1 -->
+        <div class="log-card">
+            <div class="log-version">
+                版本 0.1
+                <span class="log-date">2026-04-28</span>
+            </div>
+            <ul class="log-list">
+                <li>✅ 完成官网基础页面搭建（首页、特色、截图、加入）</li>
+                <li>✅ 新增「服务器风采」轮播图组件</li>
+                <li>✅ 优化页面圆角、阴影、交互悬浮效果</li>
+                <li>✅ 统一全站视觉风格，适配移动端基础显示</li>
+            </ul>
+        </div>
+
+        <a href="index.html" class="back-home">← 返回首页</a>
+    </div>
+</body>
+</html>

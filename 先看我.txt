@@ -1,0 +1,247 @@
+=========================================
+        我的世界服务器官网模板
+           完整使用说明
+=========================================
+
+欢迎您使用本模板！这是一个现代化、响应式的我的世界服务器官网模板，
+采用Tailwind CSS构建，设计风格参考BakaXL。
+为了让您能够快速上手并轻松修改网站的所有内容，请仔细阅读以下说明。
+
+【目录结构说明】
+bakaxl4风格官网/
+├── index.html          网站主页文件（修改页面文字内容）
+├── css/
+│   └── style.css       样式文件（修改网站外观样式）
+├── js/
+│   ├── setting.js      配置文件（修改服务器信息和链接，重点修改）
+│   └── script.js       功能脚本文件（网站交互功能）
+└── picture/
+    ├── 例子1.png       示例图片1（替换为您自己的游戏截图）
+    └── 例子2.png       示例图片2（替换为您自己的游戏截图）
+
+【快速开始】
+
+1. 修改服务器基本信息
+   - 打开 js/setting.js 文件
+   - 修改以下信息：
+     * serverName: 服务器名称
+     * serverIP: 服务器IP地址
+     * serverPort: 服务器端口
+     * serverVersion: 服务器版本
+     * socialLinks: 社交媒体链接（QQ群、B站、邮箱等）
+
+2. 替换游戏截图
+   - 准备您自己的游戏截图（建议800x600像素）
+   - 将截图重命名为"例子1.png"和"例子2.png"
+   - 替换 picture/ 目录下的同名文件
+
+3. 修改页面文字内容
+   - 打开 index.html 文件
+   - 修改页面中的标题、描述、特色介绍等文字内容
+   - 修改FAQ常见问题内容
+
+4. 修改网站样式（可选）
+   - 打开 css/style.css 文件
+   - 可修改颜色、字体大小等样式
+
+【详细修改指南】
+
+一、修改服务器基本信息（最重要）
+
+打开 js/setting.js 文件，您可以修改以下配置项：
+
+```javascript
+const serverConfig = {
+    // 服务器基本信息
+    serverName: "我的世界服务器",           // 服务器名称
+    pageTitle: "我的世界服务器 - 官方网站",   // 页面标题
+    serverIP: "mc.hypixel.net",          // 服务器IP地址
+    serverPort: "25565",                    // 服务器端口
+    serverVersion: "1.21.1",                // 服务器版本
+    
+    // 社交媒体链接
+    socialLinks: {
+        qqGroup: {
+            url: "https://qun.qq.com/join.html?key=123456789",  // QQ群链接
+            number: "123456789"                                  // QQ群号
+        },
+        bilibili: {
+            url: "https://space.bilibili.com/xxxxxx",           // 哔哩哔哩链接
+            name: "MC服务器官方账号"                              // 哔哩哔哩账号名称
+        },
+        email: "contact@mcserver.com"                           // 联系邮箱
+    },
+    
+    // 服务器状态API（用于获取在线玩家数等信息）
+    statusAPI: "https://motd.minebbs.com/api/status",
+    
+    // 下载链接（如果需要）
+    downloadLinks: {
+        client: "#",                           // 客户端下载链接
+        resourcePack: "#"                      // 资源包下载链接
+    }
+};
+```
+
+修改完成后保存文件，网站上所有相关的文字和链接都会自动更新。
+
+二、修改网站图片
+
+1. 替换游戏截图
+   - 准备您的游戏截图，建议尺寸为 800x600 像素
+   - 将图片文件重命名为 `例子1.png` 和 `例子2.png`
+   - 替换 `picture/` 目录下的同名文件
+
+2. 修改其他图片
+   - 如果需要修改其他图片，可以在 `index.html` 中找到对应的 `<img>` 标签
+   - 修改 `src` 属性指向您的图片路径
+   - 确保图片文件存在于相应路径
+
+三、修改页面文字内容
+
+打开 `index.html` 文件，您可以修改以下内容：
+
+1. 导航栏文字
+   修改导航栏中的菜单项文字，找到以下代码：
+   ```html
+   <div class="hidden md:flex space-x-8">
+       <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">首页</a>
+       <a href="#features" class="text-gray-700 hover:text-blue-600 font-medium">特色</a>
+       <a href="#gallery" class="text-gray-700 hover:text-blue-600 font-medium">截图</a>
+       <a href="#join" class="text-gray-700 hover:text-blue-600 font-medium">加入</a>
+   </div>
+   ```
+
+2. Hero区域文字
+   修改页面顶部的标题和描述文字：
+   ```html
+   <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight mb-4">
+       欢迎来到 <span class="text-blue-600">我的世界</span> 奇幻之旅
+   </h1>
+   <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+       体验最现代化的插件生存服务器，与全球玩家一起建造、探索和冒险！
+   </p>
+   ```
+
+3. 服务器介绍文字
+   修改服务器特色介绍部分的文字内容：
+   ```html
+   <h3 class="text-xl font-bold text-gray-800 mb-2">高性能</h3>
+   <p class="text-gray-600">
+       采用14900K处理器，128GB DDR4内存，确保服务器稳定运行，低延迟体验
+   </p>
+   ```
+
+4. 特色功能描述
+   修改特色功能部分的文字内容：
+   ```html
+   <h3 class="text-2xl font-bold text-gray-800 mb-3">丰富插件</h3>
+   <p class="text-gray-600">
+       超过100种精心挑选的插件，提供独特的游戏体验，包括经济系统、传送系统、家园系统等
+   </p>
+   ```
+
+5. FAQ内容
+   修改常见问题部分的内容：
+   ```html
+   <h3 class="text-xl font-bold text-gray-800">如何加入服务器？</h3>
+   <div class="faq-answer mt-4 text-gray-600 hidden">
+       <p>1. 启动Minecraft Java版客户端（推荐1.21.4版本）</p>
+       <p class="mt-2">2. 点击"多人游戏" → "直接连接"</p>
+       <p class="mt-2">3. 输入服务器地址：<span id="server-ip-faq">play.mcserver.com</span></p>
+       <p class="mt-2">4. 点击"加入服务器"即可开始游戏</p>
+   </div>
+   ```
+
+6. 页脚内容
+   修改页脚部分的文字内容：
+   ```html
+   <p class="text-gray-400 mb-4">
+       现代化插件生存服务器，提供最优质的游戏体验。
+   </p>
+   ```
+
+四、修改网站样式
+
+如果您需要修改网站的样式，可以编辑 `css/style.css` 文件。该文件包含了以下样式定义：
+
+- 全局样式变量
+- 玻璃态卡片效果
+- 按钮样式
+- 导航栏样式
+- 标题样式
+- 特色功能卡片
+- 截图展示
+- 服务器信息卡片
+- FAQ部分
+- 页脚样式
+- 动画效果
+
+样式文件主要内容如下：
+```css
+/* 自定义样式以增强BakaXL风格 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+:root {
+  --primary-blue: #4A90E2;
+  --light-blue: #F0F8FF;
+  --dark-blue: #2C6DFF;
+  --accent-pink: #FF5577;
+  --text-dark: #333333;
+  --text-gray: #555555;
+  --text-light: #FFFFFF;
+  --border-color: #E0E0E0;
+  --card-bg: rgba(255, 255, 255, 0.85);
+}
+
+body {
+  font-family: 'Noto Sans SC', 'Roboto', sans-serif;
+  background-color: var(--light-blue);
+  color: var(--text-dark);
+}
+
+/* 玻璃态卡片效果 */
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  border-radius: 16px;
+}
+```
+
+五、添加新功能
+
+如果您需要添加新功能，可以在 `js/script.js` 文件中添加JavaScript代码。该文件已包含以下功能：
+
+- 配置初始化
+- 复制服务器地址
+- 平滑滚动
+- 移动端菜单切换
+- 服务器状态更新
+- 页面元素动画
+- FAQ手风琴效果
+- 通知显示
+
+【常见问题】
+
+Q: 如何修改服务器状态API？
+A: 在 `js/setting.js` 文件中修改 `statusAPI` 配置项。默认使用的是MineBBS的API，您可以替换为自己的API地址。
+
+Q: 如何添加更多社交媒体链接？
+A: 在 `js/setting.js` 文件的 `socialLinks` 对象中添加新的社交媒体配置，然后在 `index.html` 中添加相应的HTML元素，并在 `js/script.js` 的 `initializeConfig` 函数中添加更新逻辑。
+
+Q: 如何修改网站配色方案？
+A: 在 `css/style.css` 文件中修改 `:root` 下的CSS变量，或者直接修改相应的样式规则。
+
+Q: 如何添加更多游戏截图？
+A: 在 `index.html` 的截图展示区域添加新的图片元素，确保为新元素添加适当的CSS类以保持一致的样式。
+
+【技术支持】
+
+如果您在使用过程中遇到任何问题，请加入QQ群联系老万：
+
+- QQ群：810329264
+
+温馨提示：修改文件后请刷新浏览器查看效果。

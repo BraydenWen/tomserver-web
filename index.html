@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="server-title">汤姆服务器 - 官方网站</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/rollimg-carousel.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/setting.js"></script>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+        body {
+            font-family: 'Noto Sans SC', 'Roboto', sans-serif;
+            background-color: #F0F8FF;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(74, 144, 226, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(74, 144, 226, 0.05) 0%, transparent 20%);
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .hero-pattern {
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(74, 144, 226, 0.1) 0%, transparent 15%),
+                radial-gradient(circle at 90% 80%, rgba(74, 144, 226, 0.1) 0%, transparent 15%);
+        }
+
+        .animated-bg {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen">
+    <!-- 导航栏 -->
+    <nav class="navbar py-4 px-6 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="http://shp.qpic.cn/collector/2475736084/b87b8540-5785-4d60-b7eb-96de71076134/0" alt="服务器图标"
+                    class="w-50 h-10">
+            </div>
+
+            <div class="hidden md:flex space-x-8">
+                <a href="#top" class="text-gray-700 hover:text-blue-600 font-medium">首页</a>
+                <a href="#gallery" class="text-gray-700 hover:text-blue-600 font-medium">截图</a>
+                <a href="#join" class="text-gray-700 hover:text-blue-600 font-medium">加入</a>
+
+            </div>
+
+            <button class="md:hidden text-gray-700 mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+
+            <div class="hidden md:block">
+                <a href="https://docs.qq.com/aio/DTEVNVWNwRFRSQ3BG" class="btn-primary">
+                    前往文档站
+                </a>
+            </div>
+        </div>
+
+        <!-- 移动端菜单 -->
+        <div class="mobile-menu hidden md:hidden mt-4 pb-4">
+            <div class="container mx-auto flex flex-col space-y-3 px-6">
+                <a href="#top" class="text-gray-700 hover:text-blue-600 font-medium py-2">首页</a>
+                <a href="#gallery" class="text-gray-700 hover:text-blue-600 font-medium py-2">截图</a>
+                <a href="#join" class="text-gray-700 hover:text-blue-600 font-medium py-2">加入</a>
+                <a href="https://docs.qq.com/aio/DTEVNVWNwRFRSQ3BG" class="btn-primary mt-2">
+                    前往文档站
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main>
+        <!-- hero区域 -->
+        <section id="top" class="hero-pattern py-16 md:py-24">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight mb-4">
+                        欢迎来到 <span class="text-blue-600">汤姆服务器</span> 的奇幻之旅
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        体验最现代化的插件生存服务器，与全球玩家一起建造、探索和冒险！
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#join" class="btn-primary text-lg">
+                            <i class="fas fa-play-circle mr-2"></i>立刻加入
+                        </a>
+                        <a href="https://1815565017.share.123pan.cn/123pan/SgqiVv-aQAGh" class="btn-secondary text-lg">
+                            <button>
+                                <i class="fas fa-download mr-2"></i>下载MC客户端
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div
+                            class="w-64 h-64 md:w-80 md:h-80 bg-blue-500 rounded-full opacity-20 absolute -top-10 -left-10 animated-bg">
+                        </div>
+                        <div class="w-64 h-64 md:w-80 md:h-80 bg-blue-400 rounded-full opacity-20 absolute -bottom-10 -right-10 animated-bg"
+                            style="animation-delay: 1s;"></div>
+                        <div class="relative z-10 bg-white rounded-2xl shadow-xl p-2">
+                            <img src="http://shp.qpic.cn/collector/2475736084/769e8d34-1c7b-4c6f-bc75-e28ddf690ce4/0"
+                                alt="游戏截图" class="rounded-xl w-full">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 截图展示 -->
+
+
+
+        <section id="gallery" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">游戏截图</h2>
+                    <p class="section-subtitle">
+                        探索我们服务器的精彩瞬间
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="gallery-item">
+                        <img src="http://shp.qpic.cn/collector/2475736084/ecf1dfdb-2bb0-4537-b811-3803f61dcb77/0" alt="游戏场景1" class="w-full h-80 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-800">主城（旧）</h3>
+                            <p class="text-gray-600">坐落于网易汤姆服务器的主城区</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="http://shp.qpic.cn/collector/2475736084/60ae4bf8-fe3c-4661-bc40-322122a96efa/0" alt="游戏场景2" class="w-full h-80 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-800">主城（新）</h3>
+                            <p class="text-gray-600">2026全新主城</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 服务器风采卡片 -->
+            <div class="rollimg-server-card">
+                <h2 class="rollimg-card-title text-center mb-16">服务器风采</h2>
+                <!-- 轮播组件 -->
+                <div class="rollimg-carousel">
+                    <div class="rollimg-carousel-list">
+                        <div class="rollimg-carousel-item">
+                            <img src="http://shp.qpic.cn/collector/2475736084/78131238-e2ba-4249-94c7-f3031b41691e/0"
+                                alt="服务器风采1">
+                        </div>
+                        <div class="rollimg-carousel-item">
+                            <img src="http://shp.qpic.cn/collector/2475736084/00ebf7e5-37f9-45c1-8403-9baa5508006d/0"
+                                alt="服务器风采2">
+                        </div>
+                        <div class="rollimg-carousel-item">
+                            <img src="http://shp.qpic.cn/collector/2475736084/01f5afa7-cdca-46d1-95c0-fa941500a45c/0"
+                                alt="服务器风采3">
+                        </div>
+                    </div>
+                    <!-- 左右箭头 -->
+                    <div class="rollimg-arrow rollimg-arrow-left">&lt;</div>
+                    <div class="rollimg-arrow rollimg-arrow-right">&gt;</div>
+                    <!-- 底部圆点 -->
+                    <div class="rollimg-dots">
+                        <div class="rollimg-dot active"></div>
+                        <div class="rollimg-dot"></div>
+                        <div class="rollimg-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 游戏模式 -->
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">游戏模式</h2>
+                    <p class="section-subtitle">
+                        原汁原味的生存体验
+                    </p>
+                </div>
+
+
+                <div class="glass-card p-8">
+                    <div class="flex items-start">
+                        <div class="feature-icon-bg mr-6">
+                            <i class="fas fa-home feature-icon"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-3">生存模式</h3>
+                            <p class="text-gray-600 mb-4">
+                                经典的生存体验，结合丰富的插件系统，提供独特的游戏玩法。建造你的家园，探索广阔的世界，与其他玩家合作或竞争。
+                            </p>
+                            <ul class="text-gray-600 space-y-2">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                    经济系统：通过交易、任务获得金币
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                    家园系统：保护你的建筑和物品
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                    传送系统：快速移动到各个地点
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 加入服务器 -->
+        <section id="join" class="py-16">
+            <div class="container mx-auto px-6">
+                <div class="glass-card server-info-card max-w-4xl mx-auto">
+                    <div class="text-center mb-10">
+                        <h2 class="section-title">加入我们的世界</h2>
+                        <p class="section-subtitle">
+                            立即连接服务器，开启你的冒险之旅
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row items-center justify-between bg-blue-50 rounded-xl p-6 mb-8">
+                        <div class="flex items-center mb-4 md:mb-0">
+                            <i class="fas fa-server text-blue-600 text-2xl mr-4"></i>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800">服务器地址</h3>
+                                <span class="text-gray-600" id="server-ip2">play.mcserver.com:19132</span>
+                            </div>
+                        </div>
+                        <button class="btn-primary btn-copy">
+                            <i class="fas fa-copy mr-2"></i>复制地址
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                        <div class="p-4">
+                            <div class="text-3xl font-bold text-blue-600 mb-2">0/10</div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5 mb-2">
+                                <div class="players-progress bg-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                            </div>
+                            <div class="text-gray-600">在线玩家</div>
+                        </div>
+                        <div class="p-4">
+                            <div id="server-version" class="text-3xl font-bold text-blue-600 mb-2">1.26.1X</div>
+                            <div class="text-gray-600">游戏版本</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="text-3xl font-bold text-blue-600 mb-2">在线</div>
+                            <div class="text-gray-600">在线状态</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">常见问题</h2>
+                    <p class="section-subtitle">
+                        解答你在加入服务器过程中可能遇到的问题
+                    </p>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div class="space-y-6">
+                        <div class="glass-card rounded-2xl p-6">
+                            <button class="faq-question w-full flex justify-between items-center text-left">
+                                <h3 class="text-xl font-bold text-gray-800">如何加入服务器？</h3>
+                                <i
+                                    class="fas fa-chevron-down text-blue-500 transform transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-answer mt-4 text-gray-600 hidden">
+                                <p>1. 启动Minecraft 基岩版客户端</p>
+                                <p class="mt-2">2. 点击"游戏" → "创作者多人游戏"</p>
+                                <p class="mt-2">3. 点击"添加服务器"</p>
+                                <p class="mt-2">4. 输入服务器名称（任意）和地址：<span
+                                        id="server-ip-faq">play.mcserver.com</span><br>接着输入端口：<span
+                                        id="server-port">19132</span></p>
+                                <p class="mt-2">5. 点击"添加并开始"即可开始游戏</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-card rounded-2xl p-6">
+                            <button class="faq-question w-full flex justify-between items-center text-left">
+                                <h3 class="text-xl font-bold text-gray-800">服务器支持哪些版本？</h3>
+                                <i
+                                    class="fas fa-chevron-down text-blue-500 transform transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-answer mt-4 text-gray-600 hidden">
+                                <p>目前，汤姆服务器支持我的世界基岩版1.26.1X版本。</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-card rounded-2xl p-6">
+                            <button class="faq-question w-full flex justify-between items-center text-left">
+                                <h3 class="text-xl font-bold text-gray-800">如何获取游戏货币？</h3>
+                                <i
+                                    class="fas fa-chevron-down text-blue-500 transform transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-answer mt-4 text-gray-600 hidden">
+                                <p>服务器内有多种获取金币的方式：</p>
+                                <p class="mt-2">• 完成每日任务和副本</p>
+                                <p class="mt-2">• 在交易市场出售或回收物品</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-card rounded-2xl p-6">
+                            <button class="faq-question w-full flex justify-between items-center text-left">
+                                <h3 class="text-xl font-bold text-gray-800">服务器有哪些特色插件？</h3>
+                                <i
+                                    class="fas fa-chevron-down text-blue-500 transform transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-answer mt-4 text-gray-600 hidden">
+                                <p>我们拥有较为丰富的插件系统，包括但不限于：</p>
+                                <p class="mt-2">• LL经济系统和交易市场</p>
+                                <p class="mt-2">• Pland领地系统</p>
+                                <p class="mt-2">• 多种基础功能（home、tpa、back、warp等）</p>
+                                <p class="mt-2">• 生存辅助功能（领地飞行、连锁采集、每日任务等）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 联系我们 -->
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">联系我们</h2>
+                    <p class="section-subtitle">
+                        如有任何问题或建议，欢迎随时与我们联系
+                    </p>
+                </div>
+
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <a id="qq-group-link" href="https://qun.qq.com/join.html?key=123456789" target="_blank"
+                        class="no-underline">
+                        <div class="glass-card p-8 text-center cursor-pointer hover:shadow-lg transition-shadow">
+                            <div class="feature-icon-bg mx-auto mb-6">
+                                <i class="fas fa-comments feature-icon"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">官方QQ群</h3>
+                            <p class="text-gray-600 mb-4">加入我们的官方QQ群，与其他玩家交流游戏心得</p>
+                            <p id="qq-group-number" class="text-blue-500 font-bold text-xl">123456789</p>
+                        </div>
+                    </a>
+
+                    <a id="bilibili-link" href="https://space.bilibili.com/xxxxxx" target="_blank" class="no-underline">
+                        <div class="glass-card p-8 text-center cursor-pointer hover:shadow-lg transition-shadow">
+                            <div class="feature-icon-bg mx-auto mb-6">
+                                <i class="fab fa-bilibili feature-icon"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">哔哩哔哩</h3>
+                            <p class="text-gray-600 mb-4">通过哔哩哔哩关注我们，获取更多活动资讯</p>
+                            <p id="bilibili-name" class="text-blue-500 font-bold text-xl">MC服务器官方账号</p>
+                        </div>
+                    </a>
+
+                    <a id="email-link" href="mailto:contact@mcserver.com" class="no-underline">
+                        <div class="glass-card p-8 text-center cursor-pointer hover:shadow-lg transition-shadow">
+                            <div class="feature-icon-bg mx-auto mb-6">
+                                <i class="fas fa-envelope feature-icon"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">邮箱联系</h3>
+                            <p class="text-gray-600 mb-4">如有商务合作或重要问题，请发送邮件至</p>
+                            <p id="email-address" class="text-blue-500 font-bold text-xl">contact@mcserver.com</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="favicon.png" width="28px">
+                        <span class="text-1xl font-bold" id="server-name-footer">我的世界服务器</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        现代化插件生存服务器，提供相对均衡的游戏体验。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a id="footer-qq-link" href="https://qun.qq.com/join.html?key=205244843"
+                            class="text-gray-400 hover:text-white footer-link">
+                            <i class="fab fa-qq text-xl"></i>
+                        </a>
+                        <a id="footer-bilibili-link" href="https://space.bilibili.com/431110194/"
+                            class="text-gray-400 hover:text-white footer-link">
+                            <i class="fab fa-bilibili text-xl"></i>
+                        </a>
+                        <a id="footer-email-link" href="mailto:contact@mcserver.com"
+                            class="text-gray-400 hover:text-white footer-link">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-white">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#top" class="footer-link">首页</a></li>
+                        <li><a href="#gallery" class="footer-link">游戏截图</a></li>
+                        <li><a href="#join" class="footer-link">加入服务器</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-white">服务</h3>
+                    <ul class="space-y-2">
+                        
+                        <li><a href="http://ao.rainplay.cn:51100/" class="footer-link">汤姆服务器卫星地图</a></li>
+                        <li><a href="http://ao.rainplay.cn:51012/" class="footer-link">汤姆服务器状态监控</a></li>
+                        <li><a href="#" class="footer-link">汤姆服务器法则</a></li>
+                        <li><a href="https://docs.qq.com/aio/DTEVNVWNwRFRSQ3BG" class="footer-link">服务器文档站</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-white">友情链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://nuoi.cn/" class="footer-link"
+                                style="display: inline-flex; align-items: center" ;><img
+                                    src="https://yun.nuoi.cn/upload/nt.jpg"
+                                    style="width: 16px; margin-right: 4px;">诺网导航</a></li>
+                        <li><a href="https://www.minebbs.com/" class="footer-link"
+                                style="display: inline-flex; align-items: center" ;><img
+                                    src="http://shp.qpic.cn/collector/2475736084/0e9c745c-7d7e-4529-91a5-401b57d2fb60/0"
+                                    style="width: 16px; margin-right: 4px;">MineBBS</a></li>
+                        <li><a href="https://www.mcappx.com/" class="footer-link"
+                                style="display: inline-flex; align-items: center" ;><img
+                                    src="https://www.mcappx.com/images/logo/logo.webp" class="w-4 h-4 mr-1">MCAPPX
+                                版本库</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>Copyright &copy; 2020 - 2026 TOM. All rights reserved.</p>
+            </div>
+            <p align="center" style="margin-top: 10px; font-size: 12px;" class="text-gray-400"><a href="changelog.html"
+                    style="text-decoration:none;">网站版本：<span id="web-ver">0.0</span></a></p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/rollimg-carousel.js"></script>
+</body>
+
+</html>
