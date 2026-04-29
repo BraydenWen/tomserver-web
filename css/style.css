@@ -13,6 +13,14 @@
   --card-bg: rgba(255, 255, 255, 0.85);
 }
 
+* {
+  box-sizing: border-box;
+}
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   font-family: 'Noto Sans SC', 'Roboto', sans-serif;
   background-color: var(--light-blue);
