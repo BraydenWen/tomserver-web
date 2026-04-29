@@ -17,7 +17,7 @@
         .changelog-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 20px 20px;
         }
 
         /* 页面大标题 */
@@ -26,13 +26,13 @@
             font-size: 32px;
             font-weight: bold;
             color: #1f2937;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         .changelog-sub {
             text-align: center;
             color: #6b7280;
-            margin-bottom: 50px;
+            margin-bottom: 20px;
         }
 
         /* 每个版本卡片，和你gallery-item风格完全统一 */
@@ -86,7 +86,7 @@
         .back-home {
             display: block;
             width: fit-content;
-            margin: 40px auto 0;
+            margin: 20px auto 0;
             padding: 12px 30px;
             background: #40c9ff;
             color: #fff;
@@ -102,10 +102,22 @@
 </head>
 <body>
     <div class="changelog-container">
+        <a href="index.html" class="back-home">← 返回首页</a>
         <h1 class="changelog-title">汤姆服务器官网更新日志</h1>
         <p class="changelog-sub">记录每一次优化与升级</p>
         
         <!-- 以后你要加新版本，直接复制下面这张卡片改 -->
+         <div class="log-card">
+            <div class="log-version">
+                版本 0.3
+                <span class="log-date">2026-04-30</span>
+            </div>
+            <ul class="log-list">
+                <li>✅ 修复了汤姆服务器官网在手机端显示的一个小BUG，具体表现为网页右边有小块留白</li>
+                <li>✅ 调整了更新日志的布局</li>
+            </ul>
+        </div>
+
         <div class="log-card">
             <div class="log-version">
                 版本 0.2
@@ -139,7 +151,6 @@
             </ul>
         </div>
 
-        <a href="index.html" class="back-home">← 返回首页</a>
     </div>
 </body>
 </html>
