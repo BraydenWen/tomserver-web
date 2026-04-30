@@ -1,0 +1,16 @@
+{
+  "name": "tomserver-web",
+  "version": "1.0.0",
+  "description": "汤姆服务器官方网站",
+  "private": true,
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'Static site - no build step required'"
+  },
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.14"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
