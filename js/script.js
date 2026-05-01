@@ -333,11 +333,19 @@ function initializeConfig() {
                 emailLink.href = `mailto:${serverConfig.socialLinks.email}`;
                 emailAddress.textContent = serverConfig.socialLinks.email;
             }
+            // 更新github链接和名称
+            const githubLink = document.getElementById('github-link');
+            const githubName = document.getElementById('github-name');
+            if (githubLink && githubName) {
+                githubLink.href = serverConfig.socialLinks.github.url;
+                githubName.textContent = serverConfig.socialLinks.github.name;
+            }
 
             // 更新页脚社交媒体链接
             const footerQQLink = document.getElementById('footer-qq-link');
             const footerBilibiliLink = document.getElementById('footer-bilibili-link');
             const footerEmailLink = document.getElementById('footer-email-link');
+            const footerGitHubLink = document.getElementById('footer-github-link');
 
             if (footerQQLink) {
                 footerQQLink.href = serverConfig.socialLinks.qqGroup.url;
@@ -349,6 +357,10 @@ function initializeConfig() {
 
             if (footerEmailLink) {
                 footerEmailLink.href = `mailto:${serverConfig.socialLinks.email}`;
+            }
+
+            if (footerGitHubLink) {
+                footerGitHubLink.href = serverConfig.socialLinks.github.url;
             }
         }
     }, 100);

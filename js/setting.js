@@ -3,7 +3,7 @@
 
 const serverConfig = {
     // 服务器基本信息
-    webVersion: "0.3",
+    webVersion: "0.4",
     serverName: "汤姆服务器",           // 服务器名称
     pageTitle: "汤姆服务器 - 官方网站",   // 页面标题
     serverIP: "ao.rainplay.cn", 
@@ -20,6 +20,10 @@ const serverConfig = {
         bilibili: {
             url: "https://space.bilibili.com/431110194",           // 哔哩哔哩链接
             name: "汤姆服务器官方账号"                              // 哔哩哔哩账号名称
+        },
+        github: {
+            url: "https://github.com/BraydenWen/",           // 哔哩哔哩链接
+            name: "汤姆的GitHub仓库"                              // 哔哩哔哩账号名称
         },
         email: "tomserver-official@qq.com"                           // 联系邮箱
     },

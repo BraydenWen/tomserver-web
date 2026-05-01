@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赞助支持 - 汤姆服务器</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/donate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <!-- 先引入配置文件 -->
+    <script src="js/donate_config.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0071e3',
+                        secondary: '#1d1d1f',
+                        light: '#f5f5f7',
+                        dark: '#86868b',
+                    },
+                    fontFamily: {
+                        sans: ['SF Pro Display', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .donor-diamond {
+                border-left: 4px solid #fbbf24;
+            }
+            .donor-gold {
+                border-left: 4px solid #9ca3af;
+            }
+            .donor-silver {
+                border-left: 4px solid #b45309;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-secondary">
+    <!-- 导航栏 -->
+    <nav class="navbar py-4 px-6 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <a href="index.html">
+                    <img src="https://cdn.jsdelivr.net/gh/BraydenWen/tomserver-web@refs/heads/main/picture/title_center1.png"
+                        alt="服务器图标" class="w-50 h-10">
+                </a>
+            </div>
+
+            <div class="hidden md:flex space-x-8">
+                <a href="#why" class="text-gray-700 hover:text-blue-600 font-medium">赞助说明</a>
+                <a href="#way" class="text-gray-700 hover:text-blue-600 font-medium">赞助方式</a>
+                <a href="#step" class="text-gray-700 hover:text-blue-600 font-medium">赞助步骤</a>
+                <a href="#list" class="text-gray-700 hover:text-blue-600 font-medium">赞助列表</a>
+
+            </div>
+
+            <button class="md:hidden text-gray-700 mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+
+        </div>
+
+        <!-- 移动端菜单 -->
+        <div class="mobile-menu hidden md:hidden mt-4 pb-4">
+            <div class="container mx-auto flex flex-col space-y-3 px-6">
+                <a href="#why" class="text-gray-700 hover:text-blue-600 font-medium py-2">赞助说明</a>
+                <a href="#way" class="text-gray-700 hover:text-blue-600 font-medium py-2">赞助方式</a>
+                <a href="#step" class="text-gray-700 hover:text-blue-600 font-medium py-2">赞助步骤</a>
+                <a href="#list" class="text-gray-700 hover:text-blue-600 font-medium py-2">赞助列表</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 赞助页面标题区 -->
+        <section class="pt-16 pb-16 md:pt-40 md:pb-20 bg-light">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-[clamp(2rem,5vw,3rem)] font-semibold leading-tight mb-6">
+                    赞助汤姆服务器
+                </h1>
+                <p class="text-[clamp(1.1rem,2vw,1.3rem)] text-dark max-w-2xl mx-auto">
+                    你的每一份支持，都能帮助服务器持续运营和发展，为大家提供更好的游戏体验
+                </p>
+            </div>
+        </section>
+
+        <!-- 赞助主体内容 -->
+        <section class="py-12 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-6xl mx-auto">
+                    <!-- 赞助说明 -->
+                    <section id="why">
+                        <div class="bg-light rounded-2xl p-8 mb-12 max-w-3xl mx-auto text-center">
+                            <div
+                                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fa fa-heart text-primary text-2xl"></i>
+                            </div>
+                            <h2 class="text-2xl font-medium mb-4">为什么需要赞助？</h2>
+                            <p class="text-dark mb-6">
+                                服务器的运行需要服务器租赁、带宽、维护等费用。你的每一份赞助都将用于服务器的维护和升级，
+                                为大家提供更稳定、更好的游戏体验。所有赞助金额将公开透明地用于服务器运营。
+                            </p>
+                            <div class="flex flex-wrap justify-center gap-4 text-sm text-dark">
+                                <div class="flex items-center">
+                                    <i class="fa fa-check-circle text-green-500 mr-2"></i>
+                                    <span>服务器租赁费用</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fa fa-check-circle text-green-500 mr-2"></i>
+                                    <span>带宽和网络优化</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fa fa-check-circle text-green-500 mr-2"></i>
+                                    <span>插件和功能升级</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fa fa-check-circle text-green-500 mr-2"></i>
+                                    <span>举办活动和奖励</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                        <!-- 左侧：收款码和赞助指南 -->
+                        <div class="lg:col-span-2 space-y-8">
+                            <!-- 收款码展示 -->
+                            <section id="way">
+                                <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                                    <h3 class="text-xl font-medium mb-6 text-center">赞助方式</h3>
+                                    <div class="space-y-8">
+                                        <!-- 微信支付 -->
+                                        <div class="text-center">
+                                            <div
+                                                class="w-12 h-12 bg-green-500/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                                                <i class="fab fa-weixin text-green-500 text-xl"></i>
+                                            </div>
+                                            <h4 class="font-medium mb-3">微信支付</h4>
+                                            <div
+                                                class="qrcode-container bg-white p-4 border border-gray-200 rounded-lg inline-block mx-auto shadow-sm">
+                                                <img id="wechat-qrcode" src="" alt="微信收款码"
+                                                    class="w-56 h-56 object-contain">
+                                            </div>
+                                            <p class="text-xs text-gray-500 mt-3">扫码后请备注你的游戏ID和留言内容</p>
+                                        </div>
+
+                                        <!-- 支付宝 -->
+                                        <div class="text-center">
+                                            <div
+                                                class="w-12 h-12 bg-blue-500/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                                                <i class="fa fa-credit-card text-blue-500 text-xl"></i>
+                                            </div>
+                                            <h4 class="font-medium mb-3">支付宝</h4>
+                                            <div
+                                                class="qrcode-container bg-white p-4 border border-gray-200 rounded-lg inline-block mx-auto shadow-sm">
+                                                <img id="alipay-qrcode" src="" alt="支付宝收款码"
+                                                    class="w-56 h-56 object-contain">
+                                            </div>
+                                            <p class="text-xs text-gray-500 mt-3">扫码后请备注你的游戏ID和留言内容</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section id="step">
+                                <!-- 赞助步骤 -->
+                                <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                                    <h3 class="text-xl font-medium mb-4">赞助步骤</h3>
+                                    <ol class="space-y-4">
+                                        <li class="flex">
+                                            <div
+                                                class="flex-shrink-0 w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-sm font-medium mr-3 mt-0.5">
+                                                1</div>
+                                            <div>
+                                                <p class="text-dark">使用微信或支付宝扫描上方对应的二维码</p>
+                                            </div>
+                                        </li>
+                                        <li class="flex">
+                                            <div
+                                                class="flex-shrink-0 w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-sm font-medium mr-3 mt-0.5">
+                                                2</div>
+                                            <div>
+                                                <p class="text-dark">输入赞助金额</p>
+                                            </div>
+                                        </li>
+                                        <li class="flex">
+                                            <div
+                                                class="flex-shrink-0 w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-sm font-medium mr-3 mt-0.5">
+                                                3</div>
+                                            <div>
+                                                <p class="text-dark">在备注中填写你的游戏ID和想留下的话</p>
+                                            </div>
+                                        </li>
+                                        <li class="flex">
+                                            <div
+                                                class="flex-shrink-0 w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-sm font-medium mr-3 mt-0.5">
+                                                4</div>
+                                            <div>
+                                                <p class="text-dark">完成支付后，汤姆会手动审核并添加到赞助列表</p>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </section>
+                        </div>
+
+                        <!-- 右侧：赞助列表和统计 -->
+                        <div class="lg:col-span-3 space-y-8">
+                            <!-- 赞助统计 -->
+                            <div class="bg-light rounded-2xl p-6">
+                                <h3 class="text-xl font-medium mb-6">赞助统计</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                                    <div class="bg-white rounded-xl p-4 shadow-sm">
+                                        <p class="text-dark text-sm mb-1">总赞助金额</p>
+                                        <p class="text-2xl font-semibold text-primary" id="total-amount">¥0</p>
+                                    </div>
+                                    <div class="bg-white rounded-xl p-4 shadow-sm">
+                                        <p class="text-dark text-sm mb-1">赞助人数</p>
+                                        <p class="text-2xl font-semibold text-primary" id="donor-count">0</p>
+                                    </div>
+                                    <div class="bg-white rounded-xl p-4 shadow-sm">
+                                        <p class="text-dark text-sm mb-1">最新更新</p>
+                                        <p class="text-lg font-semibold text-primary" id="last-update">--</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 赞助等级说明 -->
+                            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                                <h3 class="text-lg font-medium mb-4">赞助等级说明</h3>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                    <div class="flex items-center p-3 bg-yellow-50 rounded-lg">
+                                        <span class="inline-block w-4 h-4 rounded-full bg-yellow-500 mr-3"></span>
+                                        <div>
+                                            <p class="font-medium text-sm">钻石赞助者</p>
+                                            <p class="text-xs text-gray-500">100元以上</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                                        <span class="inline-block w-4 h-4 rounded-full bg-gray-400 mr-3"></span>
+                                        <div>
+                                            <p class="font-medium text-sm">黄金赞助者</p>
+                                            <p class="text-xs text-gray-500">50-99元</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center p-3 bg-amber-50 rounded-lg">
+                                        <span class="inline-block w-4 h-4 rounded-full bg-amber-700 mr-3"></span>
+                                        <div>
+                                            <p class="font-medium text-sm">白银赞助者</p>
+                                            <p class="text-xs text-gray-500">10-49元</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 赞助列表 -->
+                            <section id="list">
+                                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                                    <div class="p-6 border-b border-gray-100">
+                                        <h3 class="text-xl font-medium">赞助列表</h3>
+                                        <p class="text-dark text-sm mt-1">感谢所有支持服务器的玩家（按时间倒序）</p>
+                                    </div>
+
+                                    <!-- 排序和搜索 -->
+                                    <div class="p-4 border-b border-gray-100 bg-gray-50">
+                                        <div
+                                            class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                                            <div class="flex space-x-2">
+                                                <button id="sort-amount"
+                                                    class="px-3 py-1.5 text-sm bg-light hover:bg-gray-200 rounded-full transition-colors">
+                                                    按金额
+                                                </button>
+                                                <button id="sort-date"
+                                                    class="px-3 py-1.5 text-sm bg-primary text-white rounded-full transition-colors">
+                                                    按时间
+                                                </button>
+                                            </div>
+                                            <div class="relative w-full sm:w-auto">
+                                                <input type="text" id="donor-search" placeholder="搜索赞助者..."
+                                                    class="pl-8 pr-4 py-1.5 text-sm border border-gray-300 rounded-full focus:ring-2 focus:ring-primary focus:border-primary transition-all w-full sm:w-48">
+                                                <i
+                                                    class="fa fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 赞助列表内容 -->
+                                    <div class="divide-y divide-gray-50" id="donors-list">
+                                        <!-- 由JavaScript动态生成 -->
+                                        <div class="p-6 text-center">
+                                            <i class="fa fa-circle-o-notch loading-spinner text-primary text-xl"></i>
+                                            <p class="mt-2 text-dark">加载赞助者列表中...</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- 加载更多按钮 -->
+                                    <div class="p-4 text-center border-t border-gray-100">
+                                        <button id="load-more-donors"
+                                            class="text-primary hover:text-primary/80 font-medium text-sm transition-colors">
+                                            查看更多赞助者 <i class="fa fa-chevron-down ml-1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- 常见问题 -->
+                            <div class="bg-light rounded-2xl p-6">
+                                <h3 class="text-xl font-medium mb-4">常见问题</h3>
+                                <div class="space-y-4">
+                                    <div>
+                                        <h4 class="font-medium flex items-center">
+                                            <i class="fa fa-question-circle text-primary mr-2"></i>
+                                            留言会显示在哪里？
+                                        </h4>
+                                        <p class="text-dark text-sm mt-1 ml-6">赞助留言会显示在本页面的赞助列表中，由汤姆审核后发布。</p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium flex items-center">
+                                            <i class="fa fa-question-circle text-primary mr-2"></i>
+                                            如何确认我的赞助已被收到？
+                                        </h4>
+                                        <p class="text-dark text-sm mt-1 ml-6">赞助后，您可以将支付截图发送给汤姆进行确认。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="favicon.png" width="28px">
+                        <span class="text-1xl font-bold" id="server-name-footer">我的世界服务器</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        现代化插件生存服务器，提供相对均衡的游戏体验。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a id="footer-qq-link" href="https://qun.qq.com/join.html?key=205244843"
+                            class="text-gray-400 hover:text-white footer-link">
+                            <i class="fab fa-qq text-xl"></i>
+                        </a>
+                        <a id="footer-bilibili-link" href="https://space.bilibili.com/431110194/"
+                            class="text-gray-400 hover:text-white footer-link">
+                            <i class="fab fa-bilibili text-xl"></i>
+                        </a>
+                        <a id="footer-email-link" href="mailto:contact@mcserver.com"
+                            class="text-gray-400 hover:text-white footer-link">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                        <a id="footer-github-link" href="https://github.com/BraydenWen/"
+                            class="text-gray-400 hover:text-white footer-link">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-white">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="footer-link">返回官网首页</a></li>
+                        <li><a href="#why" class="footer-link">赞助说明</a></li>
+                        <li><a href="#way" class="footer-link">赞助方式</a></li>
+                        <li><a href="#step" class="footer-link">赞助步骤</a></li>
+                        <li><a href="#list" class="footer-link">赞助列表</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <img src="https://cdn.jsdelivr.net/gh/BraydenWen/tomserver-web@main/picture/tom1.png?raw=true"
+                        alt="游戏场景2" class="w-auto h-auto object-cover">
+                </div>
+
+                <div>
+                    <img src="https://cdn.jsdelivr.net/gh/BraydenWen/tomserver-web@main/picture/tom2.png?raw=true"
+                        alt="游戏场景2" class="w-auto h-auto object-cover">
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>Copyright &copy; 2020 - 2026 TOM. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+
+    <script src="js/donate_script.js"></script>
+    <script>
+        // 等待页面加载完成后执行
+        document.addEventListener('DOMContentLoaded', function () {
+            // 从配置文件获取收款码链接
+            const qrCodes = AppConfig.paymentQrCodes || {};
+
+            // 获取收款码图片元素
+            const wechatQrcode = document.getElementById('wechat-qrcode');
+            const alipayQrcode = document.getElementById('alipay-qrcode');
+
+            // 设置微信收款码
+            if (wechatQrcode && qrCodes.wechat) {
+                wechatQrcode.src = qrCodes.wechat;
+                wechatQrcode.onerror = function () {
+                    console.error('微信收款码加载失败');
+                    this.alt = '微信收款码加载失败，请联系管理员';
+                };
+            }
+
+            // 设置支付宝收款码
+            if (alipayQrcode && qrCodes.alipay) {
+                alipayQrcode.src = qrCodes.alipay;
+                alipayQrcode.onerror = function () {
+                    console.error('支付宝收款码加载失败');
+                    this.alt = '支付宝收款码加载失败，请联系管理员';
+                };
+            }
+        });
+    </script>
+
+</body>
+
+</html>

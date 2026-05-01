@@ -1,0 +1,111 @@
+/* 全局样式 - 确保所有页面风格统一 */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 动画效果 - 所有页面共用 */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.status-indicator.online {
+    animation: pulse 2s infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+    animation: spin 1s linear infinite;
+    display: none;
+}
+
+
+/* 分页指示器 */
+.page-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #d1d5db;
+    transition: all 0.3s ease;
+}
+
+.page-dot.active {
+    background-color: #0071e3;
+    width: 24px;
+    border-radius: 4px;
+}
+
+/* 留言样式 */
+.comment-content {
+    line-height: 1.6;
+}
+
+/* 按钮状态 */
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* 赞助页面样式 */
+.qrcode-container {
+    transition: all 0.3s ease;
+}
+
+.qrcode-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+#donors-list > div {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#donors-list > div:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* 搜索框样式 */
+#donor-search {
+    transition: all 0.2s ease;
+}
+
+#donor-search:focus {
+    width: 100%;
+    max-width: 200px;
+}
+
+/* 排序按钮样式 */
+#sort-amount, #sort-date {
+    transition: all 0.2s ease;
+}
+
+/* 确保图片不拉伸 */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 链接样式 */
+a {
+    transition: color 0.2s ease;
+}
+
+
+/* 响应式调整 */
+@media (max-width: 1024px) {
+    .lg\:col-span-2, .lg\:col-span-3 {
+        grid-column: span 1;
+    }
+}
+    
