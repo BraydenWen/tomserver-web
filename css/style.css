@@ -16,15 +16,27 @@
 * {
   box-sizing: border-box;
 }
+
+/* 修复手机右侧留白 - 全局 */
 html {
-  overflow-x: hidden;
+  overflow-x: visible; /* 取消html的hidden */
   width: 100%;
 }
-
 body {
-  font-family: 'Noto Sans SC', 'Roboto', sans-serif;
-  background-color: var(--light-blue);
-  color: var(--text-dark);
+  overflow-x: hidden; /* 真正防溢出写在这里 */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 所有卡片禁止溢出 */
+.glass-card,
+.feature-card,
+.gallery-item,
+.server-info-card {
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 /* 玻璃态卡片效果 */
