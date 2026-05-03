@@ -6,8 +6,8 @@ const serverConfig = {
     webVersion: "0.4",
     serverName: "汤姆服务器",           // 服务器名称
     pageTitle: "汤姆服务器 - 官方网站",   // 页面标题
-    serverIP: "ao.rainplay.cn", 
-    serverIP2: "ao.rainplay.cn:42157",         // 服务器IP地址
+    serverIP: "game.mctom.top", 
+    serverIP2: "game.mctom.top:42157",         // 服务器IP地址
     serverPort: "42157",                    // 服务器端口（如果需要）
     serverVersion: "1.26.1X",                // 服务器版本
     
