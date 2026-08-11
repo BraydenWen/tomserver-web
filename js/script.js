@@ -174,8 +174,13 @@ async function updateServerStatus() {
         // 更新服务器版本显示
         const serverVersionElement = document.getElementById('server-version');
         if (serverVersionElement) {
-            serverVersionElement.textContent = serverConfig.serverVersion;
+        serverVersionElement.textContent = serverConfig.serverVersion;
         }
+        const serverVersionFaq = document.getElementById('server-version-faq');
+        if (serverVersionFaq) {
+        serverVersionFaq.textContent = serverConfig.serverVersion;
+        }
+
     } catch (error) {
         console.error('获取服务器状态失败:', error);
         // 如果API调用失败，使用模拟数据
@@ -251,6 +256,49 @@ style.textContent = `
 document.head.appendChild(style);
 
 
+// 优秀玩家展示功能
+function initFeaturedPlayers() {
+    const playersContainer = document.getElementById('players-container');
+    const playersData = serverConfig.featuredPlayers || [];
+    
+    if (!playersContainer || playersData.length === 0) return;
+    
+    // 清空容器
+    playersContainer.innerHTML = '';
+    
+    // 渲染玩家卡片
+    playersData.forEach(player => {
+        // 创建标签HTML
+        const tagsHtml = player.tags.map(tag => `
+            <span class="tag ${tag.color}">
+                ${tag.name}
+            </span>
+        `).join('');
+        
+        // 创建玩家卡片
+        const playerCard = document.createElement('div');
+        playerCard.className = 'player-card bg-white rounded-xl p-6 shadow-sm w-full md:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)]';
+        playerCard.innerHTML = `
+            <div class="flex flex-col items-center text-center mb-4">
+                <img src="${player.avatar}" alt="${player.name}的头像" 
+                     class="player-avatar w-24 h-24 rounded-full object-cover border-4 border-white shadow-sm mb-4">
+                <h3 class="text-xl font-semibold mb-2">${player.name}</h3>
+                <div class="flex flex-wrap justify-center">
+                    ${tagsHtml}
+                </div>
+            </div>
+            <p class="text-dark text-sm mb-4">${player.description}</p>
+            <div class="flex items-center text-primary text-sm">
+                <i class="fa fa-envelope-o mr-2"></i>
+                <span>${player.contact}</span>
+            </div>
+        `;
+        
+        playersContainer.appendChild(playerCard);
+    });
+}
+
+
 // 初始化配置函数
 function initializeConfig() {
     // 等待配置加载完成
@@ -305,9 +353,15 @@ function initializeConfig() {
             }
 
             // 更新服务器版本
+            // 顶部版本框
             const serverVersionElement = document.getElementById('server-version');
             if (serverVersionElement) {
-                serverVersionElement.textContent = serverConfig.serverVersion;
+            serverVersionElement.textContent = serverConfig.serverVersion;
+            }
+            // FAQ区域版本
+            const serverVersionFaq = document.getElementById('server-version-faq');
+            if (serverVersionFaq) {
+            serverVersionFaq.textContent = serverConfig.serverVersion;
             }
 
             // 更新QQ群链接和号码
@@ -364,4 +418,6 @@ function initializeConfig() {
             }
         }
     }, 100);
+    // 初始化优秀玩家展示区
+    initFeaturedPlayers();
 }

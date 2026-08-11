@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 sortAmountBtn.classList.remove('bg-primary', 'text-white');
 
                 // 按日期降序排序
-                filteredDonors.sort((a, b) => new Date(b.date) - new Date(a.date));
+                filteredDonors.sort((a, b) => new Date(a.date) - new Date(b.date));
             }
 
             // 重置到第一页

@@ -3,11 +3,18 @@ const AppConfig = {
     // 赞助者数据
     donors: [
         {
-             name: "沙幻",
+             name: "沙幻Shahuan",
              amount: 60,
              message: "汤姆服务器牛*",
              date: "2026-03-23",
              avatar: "http://q.qlogo.cn/headimg_dl?dst_uin=3047799246&spec=640&img_type=jpg"
+         },
+         {
+             name: "逐梦ZhuMenglsl",
+             amount: 70,
+             message: "*该玩家是个无私的人，没有留言*",
+             date: "2026-08-10",
+             avatar: "http://q.qlogo.cn/headimg_dl?dst_uin=3861550931&spec=640&img_type=jpg"
          }
 
     ],
