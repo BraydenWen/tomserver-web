@@ -11,9 +11,9 @@ const AppConfig = {
          },
          {
              name: "逐梦ZhuMenglsl",
-             amount: 70,
-             message: "*该玩家是个无私的人，没有留言*",
-             date: "2026-08-10",
+             amount: 90,
+             message: "好玩",
+             date: "2026-08-11",
              avatar: "http://q.qlogo.cn/headimg_dl?dst_uin=3861550931&spec=640&img_type=jpg"
          }
 
