@@ -63,6 +63,7 @@
             <div class="hidden md:flex space-x-8">
                 <a href="#top" class="text-gray-700 hover:text-blue-600 font-medium">首页</a>
                 <a href="#gallery" class="text-gray-700 hover:text-blue-600 font-medium">截图</a>
+                <a href="#featured-players" class="text-gray-700 hover:text-blue-600 font-medium">优秀玩家</a>
                 <a href="#join" class="text-gray-700 hover:text-blue-600 font-medium">加入</a>
                 <a href="donate.html" class="text-gray-700 hover:text-blue-600 font-medium">赞助服务器</a>
 
@@ -84,6 +85,7 @@
             <div class="container mx-auto flex flex-col space-y-3 px-6">
                 <a href="#top" class="text-gray-700 hover:text-blue-600 font-medium py-2">首页</a>
                 <a href="#gallery" class="text-gray-700 hover:text-blue-600 font-medium py-2">截图</a>
+                <a href="#featured-players" class="text-gray-700 hover:text-blue-600 font-medium py-2">优秀玩家</a>
                 <a href="#join" class="text-gray-700 hover:text-blue-600 font-medium py-2">加入</a>
                 <a href="donate.html" class="text-gray-700 hover:text-blue-600 font-medium py-2">赞助服务器</a>
                 <a href="https://docs.qq.com/aio/DTEVNVWNwRFRSQ3BG" class="btn-primary mt-2">
@@ -197,6 +199,20 @@
                         <div class="rollimg-dot"></div>
                         <div class="rollimg-dot"></div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 优秀玩家展示区 -->
+        <section id="featured-players" class="py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-semibold mb-4">优秀玩家展示</h2>
+                    <p class="text-dark text-lg max-w-2xl mx-auto">认识我们服务器中最出色的玩家，他们为社区做出了重要贡献</p>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-8" id="players-container">
+                    <!-- 玩家卡片将通过JavaScript动态加载 -->
                 </div>
             </div>
         </section>
@@ -323,7 +339,7 @@
                                     class="fas fa-chevron-down text-blue-500 transform transition-transform duration-300"></i>
                             </button>
                             <div class="faq-answer mt-4 text-gray-600 hidden">
-                                <p>目前，汤姆服务器支持我的世界基岩版1.26.1X版本。</p>
+                             <p>目前，汤姆服务器支持我的世界基岩版<span id="server-version-faq">1.26.1X</span>版本。</p>
                             </div>
                         </div>
 
@@ -445,6 +461,7 @@
                     <ul class="space-y-2">
                         <li><a href="#top" class="footer-link">首页</a></li>
                         <li><a href="#gallery" class="footer-link">游戏截图</a></li>
+                        <li><a href="#featured-players" class="footer-link">优秀玩家展示</a></li>
                         <li><a href="#join" class="footer-link">加入服务器</a></li>
                         <li><a href="donate.html" class="footer-link">赞助服务器</a></li>
                     </ul>
