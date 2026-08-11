@@ -190,6 +190,15 @@ body {
 .faq-answer p:last-child {
   margin-bottom: 0;
 }
+/* 玩家卡片悬停效果 */
+.player-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
 
 /* 页脚 */
 .footer {
